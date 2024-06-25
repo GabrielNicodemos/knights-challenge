@@ -20,9 +20,6 @@
           <li class="nav-item">
             <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/about">About</router-link>
-          </li>
         </ul>
       </div>
     </div>
@@ -34,8 +31,8 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-primary texte-light">
-    <p>Feito com carinho por Gabriel Eduardo</p>
+  <footer class="bg-primary text-light text-center">
+    <p  class="mt-3">Feito com carinho por Gabriel Eduardo</p>
   </footer>
 </template>
 

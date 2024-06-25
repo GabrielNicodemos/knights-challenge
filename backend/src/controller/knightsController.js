@@ -159,6 +159,8 @@ function knights_transformed(knights_found) {
       keyAttribute: knight.keyAttribute,
       attack: attack ? attack : 0,
       experience: exp ? exp : 0,
+      hero: knight.hero,
+      nickname: knight.nickname,
     };
   });
 

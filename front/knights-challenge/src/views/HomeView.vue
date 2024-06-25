@@ -29,9 +29,6 @@
   });
 
   const selectKinights = async (knights) => {
-    console.log(knights);
-    console.log(knights.id);
-
     await fetch(`/api/knights/${knights.id}`)
     .then(res => res.json())
     .then(res => knightsSelected.value = res);
@@ -45,13 +42,6 @@
   <div class="container">
     <div class="row mt-4">
       <div class="col-sm-12 col-md-6">
-        <CardKnightsSelected
-          :name="knightsSelected?.name"
-          :nickname="knightsSelected?.nickname"
-          :attributes="knightsSelected?.attributes"
-        />
-      </div>
-      <div class="col-sm-12 col-md-6">
         <div class="card">
           <div class="card-body row">
             <div class="form-floating mb-3">
@@ -61,11 +51,22 @@
             <ListKnights
               v-for="knight in kightsFiltered"
               :key="knight.id"
-              :knightNickname="knight.name"
+              :knightname="knight?.name"
+              :nickname="knight?.nickname"
+              :hero="knight?.hero"
               @click="selectKinights(knight)"
             />
           </div>
         </div>
+      </div>
+        <div class="col-sm-12 col-md-6">
+        <CardKnightsSelected
+          :id="knightsSelected?._id"
+          :hero="knightsSelected?.hero"
+          :name="knightsSelected?.name"
+          :nickname="knightsSelected?.nickname"
+          :attributes="knightsSelected?.attributes"
+        />
       </div>
     </div>
   </div>
