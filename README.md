@@ -28,10 +28,19 @@ cd backend
 npm install
 ```
 
+```
+npm run start
+```
+
 3. Instalar dependências do frontend:
 
 ```
 cd frontend
+cd knights-challenge
 npm install
+```
+
+```
+npm run start
 ```
 
